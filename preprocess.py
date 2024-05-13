@@ -29,3 +29,4 @@ nlp = spacy.load("en_core_web_sm")
 
 df['preprocessed_review'] = df['review'].apply(preprocess)
 df.to_csv('preprocessed_data.csv', index=False)
+
