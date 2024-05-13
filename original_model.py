@@ -12,7 +12,7 @@ from tensorflow.keras.callbacks import EarlyStopping
 import time
 import gc
 
-df=pd.read_csv('preprocessed_data.csv')
+df=pd.read_csv('Dataset/preprocessed_data.csv')
 label = LabelEncoder()
 df['sentiment'] = label.fit_transform(df['sentiment'])
 

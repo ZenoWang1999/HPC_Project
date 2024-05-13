@@ -19,7 +19,7 @@ def preprocess(text):
 
     return " ".join(filtered_tokens)
 
-df=pd.read_csv('IMDB Dataset.csv')
+df=pd.read_csv('../Dataset/IMDB Dataset.csv')
 
 df['review']= df['review'].apply(lambda x: remove_numbers(x))
 df['review']= df['review'].apply(lambda x: remove_html_tags(x))
@@ -28,5 +28,5 @@ df['review']= df['review'].apply(lambda x: remove_symbols(x))
 nlp = spacy.load("en_core_web_sm")
 
 df['preprocessed_review'] = df['review'].apply(preprocess)
-df.to_csv('preprocessed_data.csv', index=False)
+df.to_csv('../Dataset/preprocessed_data.csv', index=False)
 

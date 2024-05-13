@@ -13,7 +13,7 @@ from tensorflow.keras.mixed_precision import set_global_policy
 import time
 import gc
 
-from mixed_precision_utils import convert_to_mixed_precision, train_step
+from PreprocessFunction.mixed_precision import convert_to_mixed_precision, train_step
 
 class TimeCallback(tf.keras.callbacks.Callback):
     def on_epoch_begin(self, epoch, logs=None):
@@ -35,7 +35,7 @@ if gpus:
     except RuntimeError as e:
         print(e)
 
-df=pd.read_csv('preprocessed_data.csv')
+df=pd.read_csv('Dataset/preprocessed_data.csv')
 label = LabelEncoder()
 df['sentiment'] = label.fit_transform(df['sentiment'])
 
