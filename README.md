@@ -46,10 +46,16 @@ The following is a description of each file:
 
 ## Results
 The optimized model shows 1.55x speed up in average training timen per epoch compared to the original model.
+
 ![avg_time_epoch](https://github.com/ZenoWang1999/HPC_Project/blob/master/results/avg_time_epoch.png)
+
 The optimized model shows a slight decrease in accuracy compared to the original model. But the difference is not significant.
+
 ![acc_train_acc](https://github.com/ZenoWang1999/HPC_Project/blob/master/results/avg_train_acc.png)
+
 ![acc_val_acc](https://github.com/ZenoWang1999/HPC_Project/blob/master/results/avg_vali_acc.png)
+
 The optimized model shows a 1.44 speedup in data loading time compared to the original model.
+
 ![dataload_time](https://github.com/ZenoWang1999/HPC_Project/blob/master/results/dataload_time.png)
 
