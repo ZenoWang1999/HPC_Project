@@ -42,5 +42,7 @@ The following is a description of each file:
 3. Use `source $SCRATCH/myProject/bin/activate` to activate the virtual environment, and use `pip install tensorflow` to install TensorFlow.
 4. Use `sbatch train_optimized.sbatch` to run the script. The results will be output to `optimized.out`.
 
+## Results
+
 
 
