@@ -44,5 +44,7 @@ The following is a description of each file:
 
 ## Results
 ![avg_time_epoch](https://github.com/ZenoWang1999/HPC_Project/blob/master/results/avg_time_epoch.png)
-
+![acc_train_acc](https://github.com/ZenoWang1999/HPC_Project/blob/master/results/avg_train_acc.png)
+![acc_val_acc](https://github.com/ZenoWang1999/HPC_Project/blob/master/results/avg_vali_acc.png)
+![dataload_time](https://github.com/ZenoWang1999/HPC_Project/blob/master/results/dataload_time.png)
 
