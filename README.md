@@ -43,6 +43,6 @@ The following is a description of each file:
 4. Use `sbatch train_optimized.sbatch` to run the script. The results will be output to `optimized.out`.
 
 ## Results
-
+![avg_time_epoch](https://github.com/ZenoWang1999/HPC_Project/blob/master/results/avg_time_epoch.png)
 
 
