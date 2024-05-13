@@ -30,11 +30,13 @@ The following is a description of each file:
 3. `IMDB Dataset.csv`: The dataset used for sentiment analysis, containing 50,000 movie reviews and their corresponding sentiment labels.
 4. `preprocessed_data.csv`: The dataset of the original data after preprocessing, such as word segmentation.
 5. `preprocess.py`: The script for preprocessing the original dataset. Data preprocessing is only used for local execution and not for HPC execution. If you want to train the model, please directly use `train_optimized.sbatch`.
-6. `original_model.py`: The script for training the original model without any optimization.
-7. `train.sbatch`: The script for training the original model on the HPC environment.
-8. `optimized_model.py`: The script for training the optimized model with data prefetching and mixed-precision models.
-9. `train_optimized.sbatch`: The script for training the optimized model on the HPC environment.
-10. `Final Report.pdf`: The final report of the project, including the methodology, results, and conclusions.
+6. `mixed_precision.py`: The predefined function for training the model with mixed precision.
+7. `original_model.py`: The script for training the original model without any optimization.
+8. `train.sbatch`: The script for training the original model on the HPC environment.
+9. `optimized_model.py`: The script for training the optimized model with data prefetching and mixed-precision models.
+10. `train_optimized.sbatch`: The script for training the optimized model on the HPC environment.
+11. `result` folder: The results of experiments, including the training speed and accuracy of the original and optimized models.
+    
 
 ## Instructions for Use
 1. Clone the repository to your HPC.
@@ -43,8 +45,11 @@ The following is a description of each file:
 4. Use `sbatch train_optimized.sbatch` to run the script. The results will be output to `optimized.out`.
 
 ## Results
+The optimized model shows 1.55x speed up in average training timen per epoch compared to the original model.
 ![avg_time_epoch](https://github.com/ZenoWang1999/HPC_Project/blob/master/results/avg_time_epoch.png)
+The optimized model shows a slight decrease in accuracy compared to the original model. But the difference is not significant.
 ![acc_train_acc](https://github.com/ZenoWang1999/HPC_Project/blob/master/results/avg_train_acc.png)
 ![acc_val_acc](https://github.com/ZenoWang1999/HPC_Project/blob/master/results/avg_vali_acc.png)
+The optimized model shows a 1.44 speedup in data loading time compared to the original model.
 ![dataload_time](https://github.com/ZenoWang1999/HPC_Project/blob/master/results/dataload_time.png)
 
